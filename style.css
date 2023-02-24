@@ -160,7 +160,6 @@ button:hover{
         margin-top: 4vh;
         width: 22rem;
         height: 50rem;
-        border: 1px solid ;
         display: grid;
         grid-template-rows: 48% 40% 12%;
         grid-template-areas: "header"
