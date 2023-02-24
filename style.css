@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 100%;
+    font-family: 'Open sans';
+    overflow: hidden;
+}
+.bg_mobile{
+    visibility: hidden;
+}
+.bg_desktop{
+    position: absolute;
+    width: 55em;
+    height: 30em;
+    z-index: -1;
+}
+.container{
+    position: relative;
+    z-index: 2;
+    background-color: hsl(257, 40%, 49%);
+    margin: auto;
+    margin-top: 15vh;
+    width: 65rem;
+    height: 30rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 80% 20%;
+    grid-template-areas: "header info"
+                    "header  profile_link";
+}
+.header{
+    grid-area: header;
+    padding: 1em;
+}
+.logo_header{
+    width: 8em;
+}
+.ilust_img{
+    width: 29em;
+    margin-top: 4rem;
+    margin-left: 2rem; 
+}
+.info{
+    grid-area: info;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-left: 2rem;
+}
+.info h1{
+    width: 24rem;
+    padding-top: 8rem;
+    font-size: 2em;
+    font-family: 'poppins';
+    font-weight: 600;
+    color: white;
+    text-align: start;
+}
+.info p{
+    text-align: start;
+    color: white;
+}
+button{
+    height: 2.3rem;
+    width: 8.2rem;
+    text-align: center;
+    border-radius: 2rem;
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 10px 12px 7px -8px rgba(0,0,0,0.25);
+    cursor: pointer;
+    font-family: 'poppins';
+    font-weight: 400;
+    color: hsl(257, 40%, 49%);
+}
+button:hover{
+    border: 1px solid hsl(300, 69%, 71%);
+    background-color: hsl(300, 69%, 71%);
+    color: white;
+}
+.profile_link{
+    grid-area: profile_link;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    padding: 1em;
+}
+.links{
+    width: 2rem;
+    height: 2rem;
+    margin-inline: 0.5rem;
+    padding-bottom: 0.2rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+}
+.links i{
+    padding-top: 0.4rem;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+@media  (max-width: 1050px){
+    .container, .bg_desktop{
+        width: 50rem;
+        height: 30rem;
+     }
+     .ilust_img{
+        width: 22em;
+        margin-left: 0; 
+    }
+
+}
+@media  (max-width: 800px){
+    .container, .bg_desktop{
+        width: 40rem;
+        height: 30rem;
+    }
+    .logo_header{
+        width: 8em;
+    }
+    .ilust_img{
+        width: 18em;
+        margin-top: 8rem;
+        margin-left: 0; 
+    }
+    .info{
+        padding-left: 1rem;
+    }
+    .info h1{
+        width: 22rem;
+        padding-top: 3rem;
+        font-size: 2em;
+        text-align: center;
+    }
+    .info p{
+        text-align: center;
+    }
+    .button{
+        width: 24rem;
+    }
+
+}
+@media (max-width: 640px) {
+    .bg_mobile{
+        visibility: visible;
+        position: absolute;
+        width: 22rem;
+        z-index: -1;
+    }
+    .bg_desktop{
+        visibility: hidden;
+    }    
+    .container{
+        margin: auto;
+        margin-top: 4vh;
+        width: 22rem;
+        height: 50rem;
+        border: 1px solid ;
+        display: grid;
+        grid-template-rows: 48% 40% 12%;
+        grid-template-areas: "header"
+                             "info"
+                             "profile_link";
+    }
+    .header, .info, .profile_link{
+        width: 22rem;
+    }
+    .logo_header{
+        width: 8em;
+    }
+    .ilust_img{
+        width: 20em;
+        margin-top: 4rem;
+        margin-left: 0; 
+    }
+    .info{
+        padding: 1.5rem;
+        padding-top: 0;
+    }
+    .info h1{
+        padding-top: 1rem;
+        font-size: 1.5em;
+        text-align: center;
+    }
+    button{
+        height: 2.5rem;
+        width: 12rem;
+    }
+    .profile_link{
+        padding: 0;
+    }
+    .profile_link{
+        justify-content: center;
+        align-items: center;
+    }
+
+}
